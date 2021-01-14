@@ -1,4 +1,4 @@
-#CC 106395 Fall 2021: Course Repository#
+###CC 106395 Fall 2021: Course Repository###
 ###PROJECT MEMBERS###
 StdID | Name
 ------------ | -------------
