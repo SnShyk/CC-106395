@@ -15,7 +15,7 @@ thats the reason jave use both compiler and interpreter  language
 he Java compiler doesn't create an object file, but instead it creates
  a bytecode file which is, essentially, an object file for a virtual machine 
  
- ## References ##af
+ ## References ##a
 
 https://www.cs.cmu.edu/~jcarroll/15-100-s05/supps/basics/history.html
 https://www.quora.com/Is-Java-a-compiled-language-or-interpreted-What-is-the-difference-What-is-the-JIT-compiler
