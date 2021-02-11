@@ -1,4 +1,15 @@
 ### Class ASSIGNMENT_2_RE_TO_TD ###
+
+### CC 106395 Fall 2021 Course Repository ###
+
+### PROJECT MEMBERS ###
+
+StdID | Name
+------------ | -------------
+**62558** | **Ahsan Sheikh** 
+62902 | Abdul Haleem
+
+
  
  ## Regular Expression ##
  
