@@ -11,9 +11,9 @@ StdID | Name
 
 
  
- ## Regular Expression ##
+ ## Regular Expression for email ##
  
- RE = "(a+b)(a+b+1+0+.+_)+@(a+b+0+1+.)*";
+ Regular Expression = "(a+b)(a+b+1+0+.+_)+@(a+b+0+1+.)*";
   
 
  ## R.E to NFA ##
