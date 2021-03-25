@@ -20,32 +20,32 @@ def main():
     print("main function")
     
     
-### Example of for methon constructs ###
+* #### Example of for methon constructs ####
 
 def __init__(self:"class Name"):
         self.items = [0]
         
-### Example of for if else constructs ###  
+* #### Example of for if else constructs ####  
 if x == x:
   print("") 
 else:
   print("")     #print value   
         
         
-### Example of for while  loop constructs ###
+* #### Example of for while  loop constructs ####
  i:int = 0   (variable declar)
     while i < 0:
        i = i + 1
       
-### Example of for array constructs ###
+* #### Example of for array constructs ####
 y:int=  [4, 8, 15, 16, 23, 42] 
 
- ### Example of for loop  constructs ### 
+ * #### Example of for loop  constructs #### 
   for num in y:
      print(y[num])
     
 
- ### Example of for variable  constructs ### 
+ * #### Example of for variable  constructs #### 
 i:int = 0
 
 ### Lexical Specification ###
@@ -76,5 +76,5 @@ physical line. Comments are ignored by the lexical analyzer
 
 
 
-# Language CFG #
+## Language CFG ##
 PROG -> LIB FUNCTION | ;
