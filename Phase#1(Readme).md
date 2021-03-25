@@ -4,15 +4,15 @@ StdID | Name
 ------------ | -------------
 **62558** | **Ahsan Sheikh** <!--this is the group leader in bold-->
 62902 | Abdul Haleem
-<!-- Replace name and student ids with acutally group member names and ids-->
+
 
 ### Language Selected ###
 Choco Py
 
 ChocoPy is a programming language . ChocoPy is a restricted subset of Python 3, The language is fully specified using formal grammar, typing rules, and operational semantics
-<!--Replace with your choice-->
+
 ### Example of main constructs ###
-```
+
 Main function is the entry point of any program. But python interpreter executes the source file code sequentially and doesn’t call any method if it’s not part of the code. But if it’s directly part of the code then it will be executed when the file is imported as a module.
 That’s why there is a special technique to define main method in python program, so that it gets executed only when the program is run directly and not executed when imported as a module. Let’s see how to define python main function in a simple program
 
