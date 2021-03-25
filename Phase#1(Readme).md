@@ -54,5 +54,25 @@ The whitespace characters space and tab can be used to separate tokens. It is ne
 **Integer literals**
 Integer literal in ChocoPy is made up of one or more digits like 0-9. There are non-zero valued integer literals and it is the left most digit 0. If it is only character in the sequence.The integer value of these literals is interpreted in base 10. And its maximum value can be 1-231 literal. Literal with larger value gives the lexical error
 
+**Identifiers**
+contiguous sequence of characters its called identifiers. containing . A to Z @ ,0 to 9
+
+**Keywords**
+keywords are not recognized as identifiers.chocopy keywords.
+False, None, True, and,  break, class, continue, def, del, elif, else,
+ for, global, if, import, in, is, lambda,return,try, while,  
+
+ **Operators**
+operators in chocopy
++ - * // % < > <= >= == != = ( ) [ ] , : . ->
+
+** Comments**
+A comment starts with a hash character (#) that is not part of a string literal, and ends at the end of the
+physical line. Comments are ignored by the lexical analyzer
+
+
+
+
+
 ## Language CFG ##
 PROG -> LIB FUNCTION | ;
