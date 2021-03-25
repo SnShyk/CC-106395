@@ -46,13 +46,13 @@ y:int=  [4, 8, 15, 16, 23, 42]
  ## Example of for variable  constructs ## 
 i:int = 0
 
-## Lexical Specification##
- if:
-           
- else:
+## Lexical Specification ##
+ 
+**Whitespaces**
+The whitespace characters space and tab can be used to separate tokens. It is needed between two tokens only if their concatenation could otherwise it will be deal as a different token.Whitespace characters are not tokens, they are simply ignored.
       
-ID := (LETTER|"\_") + (LETTER|"\_"|DIGIT)*
-REAL :=
+**Integer literals**
+Integer literal in ChocoPy is made up of one or more digits like 0-9. There are non-zero valued integer literals and it is the left most digit 0. If it is only character in the sequence.The integer value of these literals is interpreted in base 10. And its maximum value can be 1-231 literal. Literal with larger value gives the lexical error
 
 ## Language CFG ##
 PROG -> LIB FUNCTION | ;
