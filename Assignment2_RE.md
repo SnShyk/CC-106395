@@ -16,7 +16,7 @@ StdID | Name
  Regular Expression = "(a+b)(a+b+1+0+.+_)+@(a+b+0+1+.)*";
   
 
- ## R.E to NFA ##
+ ## RE to NFA ##
 
 ![WhatsApp Image 2021-02-11 at 12 24 55 PM](https://user-images.githubusercontent.com/66660943/107641650-adfe8e80-6c95-11eb-8b63-12b578f6602b.jpeg)
 
