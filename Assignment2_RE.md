@@ -7,7 +7,7 @@
 StdID | Name
 ------------ | -------------
 **62558** | **Ahsan Sheikh** 
-62902 | Abdul Haleem
+62902 | Abdul Haleem Siddiqui
 
 
  
