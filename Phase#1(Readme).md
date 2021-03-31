@@ -7,7 +7,7 @@ StdID | Name
 
 
 ### Language Selected ###
-Choco Py
+"Choco Py" 
 
 ChocoPy is a programming language . ChocoPy is a restricted subset of Python 3. The language is fully specified using formal grammar, typing rules, and operational semantics
 
