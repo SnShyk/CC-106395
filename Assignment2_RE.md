@@ -1,4 +1,4 @@
-### Class ASSIGNMENT_2_RE_TO_TD ###
+### Class ASSIGNMENT-2-RE_TO_TD ###
 
 ### CC 106395 Fall 2021 Course Repository ###
 
