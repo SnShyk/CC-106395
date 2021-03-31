@@ -167,17 +167,33 @@ func body ::= Jglobal decl | nonlocal decl | var def | func def K
 ∗
 stmt+
 typed var ::= ID : type
+
 type ::= ID | IDSTRING | [ type ]
+
+
 global decl ::= global ID NEWLINE
+
+
 nonlocal decl ::= nonlocal ID NEWLINE
+
+
 var def ::= typed var = literal NEWLINE
+
+
 stmt ::= simple stmt NEWLINE
+
+
 | if expr : block Jelif expr : block K
 ∗
 Jelse : blockK
 ?
+
 | while expr : block
+
+
 | for ID in expr : block
+
+
 simple stmt ::= pass
 | expr
 | return JexprK
@@ -185,15 +201,21 @@ simple stmt ::= pass
 | J target = K
 + expr
 block ::= NEWLINE INDENT stmt+ DEDENT
+
+
 literal ::= None
 | True
 | False
 | INTEGER
 | IDSTRING | STRING
+
+
 expr ::= cexpr
 | not expr
 | expr Jand | orK expr
 | expr if expr else expr
+
+
 cexpr ::= ID
 | literal
 | [ Jexpr J, exprK
@@ -202,8 +224,11 @@ K
 ?
 ]
 | ( expr )
+
 | member expr
+
 | index expr
+
 | member expr ( Jexpr J, exprK
 ∗
 K
@@ -215,10 +240,18 @@ K
 ?
 )
 | cexpr bin op cexpr
+
 | - cexpr
+
 bin op ::= + | - | * | // | % | == | != | <= | >= | < | > | is
+
 member expr ::= cexpr . ID
+
 index expr ::= cexpr [ expr ]
+
 target ::= ID
+
 | member expr
+
 | index expr
+
