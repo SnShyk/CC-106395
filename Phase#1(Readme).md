@@ -148,9 +148,9 @@ class_def_raw:
     
     
     
-    complete short grammar 
-    program ::= Jvar def | func def | class def K
-∗
+ complete short grammar 
+program ::= Jvar def | func def | class def K
+
 stmt∗
 class def ::= class ID ( ID ) : NEWLINE INDENT class body DEDENT
 class body ::= pass NEWLINE
