@@ -8,7 +8,7 @@ In Java, programs are not compiled into executable files; they are compiled into
 
 * #### java is both compiled and interpreted language.Its first we compiled the code into bytecode  
 (bytcode is the  instruction set program code that compile the code into low level software int)
-then convert into machine code by interpreter .java run environemnt can understand jvr(convert the bytecode into machine language)
+then convert into machine code by interpreter .java run environemnt can understand jvr(convert the bytecode into the machine language)
 thats the reason jave use both compiler and interpreter  language 
 
 * #### java solve the platform issue , it rearrange the complier  link sequance at an root level of the compiler
