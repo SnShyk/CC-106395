@@ -145,9 +145,10 @@ class_def_raw:
     
     
     
- complete short grammar 
+### complete short CFG ### 
+ 
 program ::= Jvar def | func def | class def K
-
+∗
 stmt∗
 class def ::= class ID ( ID ) : NEWLINE INDENT class body DEDENT
 class body ::= pass NEWLINE
@@ -164,33 +165,17 @@ func body ::= Jglobal decl | nonlocal decl | var def | func def K
 ∗
 stmt+
 typed var ::= ID : type
-
 type ::= ID | IDSTRING | [ type ]
-
-
 global decl ::= global ID NEWLINE
-
-
 nonlocal decl ::= nonlocal ID NEWLINE
-
-
 var def ::= typed var = literal NEWLINE
-
-
 stmt ::= simple stmt NEWLINE
-
-
 | if expr : block Jelif expr : block K
 ∗
 Jelse : blockK
 ?
-
 | while expr : block
-
-
 | for ID in expr : block
-
-
 simple stmt ::= pass
 | expr
 | return JexprK
@@ -198,21 +183,15 @@ simple stmt ::= pass
 | J target = K
 + expr
 block ::= NEWLINE INDENT stmt+ DEDENT
-
-
 literal ::= None
 | True
 | False
 | INTEGER
 | IDSTRING | STRING
-
-
 expr ::= cexpr
 | not expr
 | expr Jand | orK expr
 | expr if expr else expr
-
-
 cexpr ::= ID
 | literal
 | [ Jexpr J, exprK
@@ -221,21 +200,12 @@ K
 ?
 ]
 | ( expr )
-
 | member expr
-
 | index expr
-
 | member expr ( Jexpr J, exprK
-∗
-K
-?
-)
-| ID ( Jexpr J, exprK
-∗
-K
-?
-)
+
+|ID ( [[pr J, exprK∗K^?)
+
 | cexpr bin op cexpr
 
 | - cexpr
@@ -250,5 +220,5 @@ target ::= ID
 
 | member expr
 
-| Index expr
+| index expr
 
