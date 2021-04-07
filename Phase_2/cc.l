@@ -1,3 +1,8 @@
+
+/***The following categories of tokens exist: line structure, identifiers, keywords, literals, operators, and
+delimiters***/
+
+
 %{
 #include <stdio.h>
 
