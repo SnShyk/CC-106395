@@ -3,7 +3,7 @@
 
 #define  YY_INT_ALIGNED short int
 
-/* Flex genera*/
+/* Flex generat*/
 
 #define FLEX_SCANNER
 #define YY_FLEX_MAJOR_VERSION 2
