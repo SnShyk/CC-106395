@@ -45,7 +45,7 @@ False|None|True|and|as|assert|async|await|break|class|continue|def|del|elif|else
 
 [0-9]*|[0-9]*"."[0-9]*e[-|+][0-9]*|[a-z]* printf("%d %s\n",LITERAL,yytext);
 
-","|";" printf("%d %s\n",delimeters,yytext);
+"."|":"|","|";" printf("%d %s\n",delimeters,yytext);
 
 
 %%
