@@ -49,176 +49,56 @@ y:int=  [4, 8, 15, 16, 23, 42]
 i:int = 0
 
 ### Lexical Specification ###
- 
-* #### Whitespaces ####
-The whitespace characters space and tab can be used to separate tokens. It is needed between two tokens only if their concatenation could otherwise it will be deal as a different token.Whitespace characters are not tokens, they are simply ignored.
-      
-* #### Integer literals ####
-Integer literal in ChocoPy is made up of one or more digits like 0-9. There are non-zero valued integer literals and it is the left most digit 0. If it is only character in the sequence.The integer value of these literals is interpreted in base 10. And its maximum value can be 1-231 literal. Literal with larger value gives the lexical error
 
-* #### Identifiers ####
-contiguous sequence of characters its called identifiers. containing . [A-Za=z0-9]*
-{identifier} {return symbol(chocoPyTokens.IDENTIFIER,yytext());}
-* #### Keywords ####
-keywords are not recognized as identifiers.chocopy keywords.
-False, None, True, and,  break, class, continue, def, del, elif, else,
- for, global, if, import, in, is, lambda,return,try, while,  
- <token>"Flase" {return symbol(chocoPyTokens.False);}
- <token>"None" {return symbol(chocoPyTokens.None);}
- <token>"True" {return symbol(chocoPyTokens.True);}
-
-* #### Operators ####
-operators in chocopy
-+ - * // % < > <= >= == != = ( ) [ ] , : . ->
+* #### Line structure ####
+ To accommodate this, ChocoPy defines three lexical
+tokens that are derived from whitespace: NEWLINE, INDENT, and DEDENT. The rules for when such tokens are
+generated are described next using the concepts of physical and logical lines.
+ Logical Line:NEWLINE  (A physical line is a sequence of characters terminated by an end-of-line sequence)
+ Physical Line:\r\n (A logical line is a physical line that contains at least one token that is not whitespace or comments. The end
+of a logical line is represented by the lexical token NEWLINE.)
 
 * #### Comments ####
 A comment starts with a hash character (#) that is not part of a string literal, and ends at the end of the
 physical line. Comments are ignored by the lexical analyzer
 
 
+* #### Whitespaces ####
+The whitespace characters space and tab can be used to separate tokens. It is needed between two tokens only if their concatenation could otherwise it will be deal as a different token.Whitespace characters are not tokens, they are simply ignored.
+e.g ab is a tokken but a b is two tokken 
+
+* #### Identifiers ####
+contiguous sequence of characters its called identifiers. containing . [A-Za=z0-9]*
+
+
+* #### Keywords ####
+keywords are not recognized as identifiers.chocopy keywords.
+False, None, True, and,  break, class, continue, def, del, elif, else,
+ for, global, if, import, in, is, lambda,return,try, while,  
+// <token>"Flase" {return symbol(chocoPyTokens.False);}
+// <token>"None" {return symbol(chocoPyTokens.None);}
+// <token>"True" {return symbol(chocoPyTokens.True);}
+      
+* #### Integer literals ####
+Integer literal in ChocoPy is made up of one or more digits like 0-9. There are non-zero valued integer literals and it is the left most digit 0. If it is only character in the sequence.The integer value of these literals is interpreted in base 10. And its maximum value can be 1-231 literal. Literal with larger value gives the lexical error
+ e.g
+ * String literals: in ascii  represnt the decimal range [32-126] and double quotes
+ * Integer Literals: limit [0-9] and [1-2^32] A literal with a larger value than this limit results in a
+lexical error.
+
+
+
+* #### Operators ####
+operators in chocopy
++ - * // % < > <= >= == != = ( ) [ ] , : . ->
+
+* #### Delimeters ####
+* is also called sperator .
+e.g , ;
+
+
+
 ## Language CFG ##
-PROG -> LIB FUNCTION | ;
-func_type: '(' [type_expressions] ')' '->' expression NEWLINE* ENDMARKER 
-    | single_target augassign ~ (yield_expr | star_expressions) 
-augassign:
-    | '+=' 
-    | '-=' 
-    | '*=' 
-    | '@=' 
-    | '/=' 
-    | '%=' 
-    | '&=' 
-    | '|=' 
-    | '^=' 
-    | '<<=' 
-    | '>>=' 
-    | '**=' 
-    | '//=' 
-
-global_stmt: 'global' ','.NAME+ 
-
-
-
-del_stmt:
-    | 'del' del_targets &(';' | NEWLINE) 
-import_stmt: import_name | import_from
-
-if_stmt:
-    | 'if' named_expression ':' block elif_stmt 
-    | 'if' named_expression ':' block [else_block] 
-elif_stmt:
-    | 'elif' named_expression ':' block elif_stmt 
-    | 'elif' named_expression ':' block [else_block] 
-else_block: 'else' ':' block 
-
-while_stmt:
-    | 'while' named_expression ':' block [else_block] 
-
-for_stmt:
-    | 'for' star_targets 'in' ~ star_expressions ':' [TYPE_COMMENT] block [else_block] 
-    | ASYNC 'for' star_targets 'in' ~ star_expressions ':' [TYPE_COMMENT] block [else_block] 
-    
-    
-try_stmt:
-    | 'try' ':' block finally_block 
-    | 'try' ':' block except_block+ [else_block] [finally_block] 
-except_block:
-    | 'except' expression ['as' NAME ] ':' block 
-    | 'except' ':' block 
-finally_block: 'finally' ':' block 
-
-
-
-return_stmt:
-    | 'return' [star_expressions] 
-    
-parameters:
-    | slash_no_default param_no_default* param_with_default* [star_etc] 
-    | slash_with_default param_with_default* [star_etc] 
-    | param_no_default+ param_with_default* [star_etc] 
-    | param_with_default+ [star_etc] 
-    | star_etc 
-class_def_raw:
-    | 'class' NAME ['(' [arguments] ')' ] ':' 
-    
-    
-    
-    
-    
-### complete short CFG ### 
- 
-program ::= Jvar def | func def | class def K
-∗
-stmt∗
-class def ::= class ID ( ID ) : NEWLINE INDENT class body DEDENT
-class body ::= pass NEWLINE
-| Jvar def | func def K
-+
-func def ::= def ID ( Jtyped var J, typed varK
-∗
-K
-?
-) J-> typeK
-?
-: NEWLINE INDENT func body DEDENT
-func body ::= Jglobal decl | nonlocal decl | var def | func def K
-∗
-stmt+
-typed var ::= ID : type
-type ::= ID | IDSTRING | [ type ]
-global decl ::= global ID NEWLINE
-nonlocal decl ::= nonlocal ID NEWLINE
-var def ::= typed var = literal NEWLINE
-stmt ::= simple stmt NEWLINE
-| if expr : block Jelif expr : block K
-∗
-Jelse : blockK
-?
-| while expr : block
-| for ID in expr : block
-simple stmt ::= pass
-| expr
-| return JexprK
-?
-| J target = K
-+ expr
-block ::= NEWLINE INDENT stmt+ DEDENT
-literal ::= None
-| True
-| False
-| INTEGER
-| IDSTRING | STRING
-expr ::= cexpr
-| not expr
-| expr Jand | orK expr
-| expr if expr else expr
-cexpr ::= ID
-| literal
-| [ Jexpr J, exprK
-∗
-K
-?
-]
-| ( expr )
-| member expr
-| index expr
-| member expr ( Jexpr J, exprK
-
-|ID ( [[pr J, exprK∗K^?)
-
-| cexpr bin op cexpr
-
-| - cexpr
-
-bin op ::= + | - | * | // | % | == | != | <= | >= | < | > | is
-
-member expr ::= cexpr . ID
-
-index expr ::= cexpr [ expr ]
-
-target ::= ID
-
-| member expr
-
-| index expr
+![Untitled2](https://user-images.githubusercontent.com/66660943/115433657-3b73d700-a221-11eb-8555-e1c7630808f5.png)
+![Untitled](https://user-images.githubusercontent.com/66660943/115433670-3d3d9a80-a221-11eb-95b9-4476dfa18ff7.png)
 
