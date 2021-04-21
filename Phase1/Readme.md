@@ -80,11 +80,13 @@ False, None, True, and,  break, class, continue, def, del, elif, else,
 // <token>"None" {return symbol(chocoPyTokens.None);}
 // <token>"True" {return symbol(chocoPyTokens.True);}
       
-* #### Integer literals ####
+* ####  literals ####
 Integer literal in ChocoPy is made up of one or more digits like 0-9. There are non-zero valued integer literals and it is the left most digit 0. If it is only character in the sequence.The integer value of these literals is interpreted in base 10. And its maximum value can be 1-231 literal. Literal with larger value gives the lexical error
  e.g
- * String literals: in ascii  represnt the decimal range [32-126] and double quotes
- * Integer Literals: limit [0-9] and [1-2^32] A literal with a larger value than this limit results in a
+ * String literals: in ascii  represnt the decimal range [32-126] and double quotes 
+\"([^\\"]|\\")*\" e.g literal "He\"ll\"o" but value show this:He"ll"o
+
+ * Integer Literals: limit [0-9] and [1-2^32] [0-9]+ A literal with a larger value than this limit results in a
 lexical error.
 
 
