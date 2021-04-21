@@ -66,6 +66,7 @@ physical line. Comments are ignored by the lexical analyzer
 * #### Whitespaces ####
 The whitespace characters space and tab can be used to separate tokens. It is needed between two tokens only if their concatenation could otherwise it will be deal as a different token.Whitespace characters are not tokens, they are simply ignored.
 e.g ab is a tokken but a b is two tokken 
+" "| |\n|\t
 
 * #### Identifiers ####
 contiguous sequence of characters its called identifiers. containing . [A-Za=z0-9]*
@@ -90,11 +91,11 @@ lexical error.
 
 * #### Operators ####
 operators in chocopy
-+ - * // % < > <= >= == != = ( ) [ ] , : . ->
++ - * // % < > <= >= == != = ( ) [ ]  ->
 
 * #### Delimeters ####
 * is also called sperator .
-e.g , ;
+e.g , ; : .
 
 
 
