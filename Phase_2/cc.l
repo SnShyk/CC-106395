@@ -36,7 +36,7 @@ letter [a-z]|[A-Z]
 
 "+"|"-"|"*"|"//"|"%"|"=="|"!="|"<="|">="|"<"|">"|"is" printf("%d %s\n",operators,yytext);
 
-."/r/n"|# |[ -\t-\n-#]+ printf("%d %s\n",linestr,yytext);
+."/r/n"|#|[ |\n|\t|""] printf("%d %s\n",linestr,yytext);
 
 
 False|None|True|and|as|assert|async|await|break|class|continue|def|del|elif|else|except|finally|for|from|global|if|import|in|lambda|non|local|not|or|pass|raise|return|try|while|with|yield printf("%d %s\n",keywords,yytext);
