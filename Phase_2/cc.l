@@ -6,7 +6,7 @@ delimiters***/
 %{
 
 #include <stdio.h>
-/***Token C
+/***Token Cl
 #define ID 0
 #define linestr 1 
 #define operators 2 
