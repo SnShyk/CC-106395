@@ -11,7 +11,30 @@ StdID | Name
 Replace this text with the description of your project. Tell what the project was about. What you aimed to deliver in the project.
 
 ## Sample Language Used ##
-i used python syantx or calculator program run
+ ChocoPy is a restricted subset of Python 3, which can easily be compiled to a target.  ChocoPy programs can be executed directly in a Python (3.6+) interpreter. ChocoPy programs can also be edited using standard Python syntax highlighting. ChocoPy uses Python 3.6 type annotations to enforce static type checking. The type system supports nominal subtyping. The language is fully specified using formal grammar, typing rules, and operational semantics
+
+
+
+
+#### Check Syntax error ####
+*python code example 
+
+python -c "import ast; ast.parse(open('programfile').read())"
+
+import ast, traceback
+
+filename = 'programfile'
+with open(filename) as f:
+    source = f.read()
+valid = True
+try:
+    ast.parse(source)
+except SyntaxError:
+    valid = False
+    traceback.print_exc()
+print(valid)
+
+*e.g
 var=2+3; 
 var=2+4+a; 
 print ''as'' error
@@ -21,44 +44,6 @@ print ''as'' error
 5
 
 +3-2 error
-
-#### Include Same Example.h ####
-/* Token type.  */
-#ifndef YYTOKENTYPE
-#define YYTOKENTYPE
-  enum yytokentype
-  {
-    ID = 258,
-    NUMBER = 259,
-    STRING_LIT = 260,
-    STRING_VAR = 261,
-    EQ = 262,
-    PLUS = 263,
-    MINUS = 264,
-    MUL = 265,
-    DIVIDE = 266,
-    LBRACKET = 267,
-    RBRACKET = 268,
-    SEMICOLON = 269,
-    PRINT = 270,
-    KEYWORD = 271
-  };
-#endif
-/* Tokens. */
-#define ID 258
-#define NUMBER 259
-#define STRING_LIT 260
-#define STRING_VAR 261
-#define EQ 262
-#define PLUS 263
-#define MINUS 264
-#define MUL 265
-#define DIVIDE 266
-#define LBRACKET 267
-#define RBRACKET 268
-#define SEMICOLON 269
-#define PRINT 270
-#define KEYWORD 271
 
 
 #### Lexical Specification ####
@@ -110,7 +95,17 @@ operators in chocopy
 * is also called sperator .
 e.g , ; : .
 
+## Lexical Tokens ##
+the following token in chocopy language
 
+Identifer(Char) :>0,1,2,3,5,6,7  .a,b,c,A,B,C,Z
+Line Structure (newline ,Indent ):> \n,\t,"","	"
+Keyword:>False,Trueandas,class,await,break,continue,def,,elif,else,for,global,if,import,in,lambda,not,or,retun,while
+Operator:>+,-,",*,//,%,==,<=,>=
+LITERAL:(string or int) :"asdasd" 123123
+Delimeters:>. : ; ,
+Predefine:> input,print,len
+Comments:>"#"
 
 ####Grammar####
 
@@ -119,17 +114,17 @@ e.g , ; : .
 
 #### Problems Faced ####
 
-####Problem 1: Yacc program ####
+#### Problem 1: Yacc program ####
 When we merged our lex and yacc file means (1 & .y extension file). We had so many errors in it's compilations like (undefined reference of function in y file, redeifintions, declaration and so on). We had no idea about them because we never worked on such environment. It's our first time when we designed parser so most of the errors were new to us so we researched, took guide from videos and book and then finally after spending several hours on it we resolved them. 
 
 ## Problem 2: Install Flex ##
 When we created our lexical analyzer we had many issues in its compilation. Our lex file wasn't created because of installation issues in line, so after trying so many times finally we got succeed.
 ### Problem 3: language selection problem and why we select this.  ###
 
-we don't have any good background for pascal or java but python is used in many course like ml,ai nc fyp. ChocoPy programs can be executed directly in a Python (3.6+) interpreter. ChocoPy programs can also be edited using standard Python syntax highlighting. ChocoPy uses Python 3.6 type annotations to enforce static type checking. The type system supports nominal subtyping. The language is fully specified using formal grammar, typing rules, and operational semantics
-
+we don't have any good background for pascal or java but python is used in many course like ml,ai nc fyp.so finally we decide we work on them .chocopy fullfill all necessary requirement like grammar etc.
 ## References ##
 * https://chocopy.org/
 * https://www.python.org/dev/peps/pep-0526/
 * https://chocopy.org/chocopy_language_reference.pdf
 * http://dinosaur.compilertools.net/flex/manpage.html
+* https://chocopy.org/chocopy_implementation_guide.pdf
