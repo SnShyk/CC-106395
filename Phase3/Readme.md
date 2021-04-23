@@ -75,26 +75,26 @@ operators in chocopy
 * is also called sperator .
 e.g , ; : .
 
-```
-###Lexical Specification###
 
-###Grammar###
+####Lexical Specification####
+
+####Grammar####
 
 ![Untitled](https://user-images.githubusercontent.com/66660943/115433670-3d3d9a80-a221-11eb-95b9-4476dfa18ff7.png)
 ![Untitled2](https://user-images.githubusercontent.com/66660943/115433657-3b73d700-a221-11eb-8555-e1c7630808f5.png)
 
-##Problems Faced##
+####Problems Faced####
 
-###Problem 1: Yacc program ###
+####Problem 1: Yacc program ####
 When we merged our lex and yacc file means (1 & .y extension file). We had so many errors in it's compilations like (undefined reference of function in y file, redeifintions, declaration and so on). We had no idea about them because we never worked on such environment. It's our first time when we designed parser so most of the errors were new to us so we researched, took guide from videos and book and then finally after spending several hours on it we resolved them. 
 
-###Problem 2: Install Flex###
+####Problem 2: Install Flex####
 When we created our lexical analyzer we had many issues in its compilation. Our lex file wasn't created because of installation issues in line, so after trying so many times finally we got succeed.
 ###Problem 2: no background in Python ###
 
 we don't have any good background of python. we generally work on c sharp, javascript usually.
 
-##References##
+####References####
 * https://chocopy.org/
 * https://www.python.org/dev/peps/pep-0526/
 * https://chocopy.org/chocopy_language_reference.pdf
