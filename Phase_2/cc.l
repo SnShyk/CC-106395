@@ -6,7 +6,7 @@ delimiters***/
 %{
 
 #include <stdio.h>
-/***To
+/***Toke
 #define ID 0
 #define linestr 1 
 #define operators 2 
