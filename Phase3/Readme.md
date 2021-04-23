@@ -1,10 +1,11 @@
-#DM 1033XX: REPLACE WITH YOUR PROJECT TITLE#
-<!-- Replace XX with your course ID-->
-###PROJECT MEMBERS###
+
+### CC Spring 2021: Project Report ####
+### PROJECT MEMBERS ###
 StdID | Name
 ------------ | -------------
-**62558** | **Ahsan** <!--this is the group leader in bold-->
-62902 | Abdulhaleem
+**62558** | **Ahsan Sheikh** <!--this is the group leader in bold-->
+62902 | Abdul Haleem
+
 <!-- Replace name and student ids with acutally group member names and ids-->
 ## Project Description ##
 Replace this text with the description of your project. Tell what the project was about. What you aimed to deliver in the project.
@@ -21,6 +22,10 @@ print ''as'' error
 
 +3-2 error
 
+###Grammar###
+
+![Untitled](https://user-images.githubusercontent.com/66660943/115433670-3d3d9a80-a221-11eb-95b9-4476dfa18ff7.png)
+![Untitled2](https://user-images.githubusercontent.com/66660943/115433657-3b73d700-a221-11eb-8555-e1c7630808f5.png)
 
 
 * #### Line structure ####
@@ -73,9 +78,8 @@ e.g , ; : .
 ```
 ###Lexical Specification###
 
-
-
 ###Grammar###
+
 ![Untitled](https://user-images.githubusercontent.com/66660943/115433670-3d3d9a80-a221-11eb-95b9-4476dfa18ff7.png)
 ![Untitled2](https://user-images.githubusercontent.com/66660943/115433657-3b73d700-a221-11eb-8555-e1c7630808f5.png)
 
