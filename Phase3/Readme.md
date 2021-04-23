@@ -8,7 +8,8 @@ StdID | Name
 
 <!-- Replace name and student ids with acutally group member names and ids-->
 ## Project Description ##
-Replace this text with the description of your project. Tell what the project was about. What you aimed to deliver in the project.
+In this project we learn how to use compiler. We work on choco py language using FLEX & YACC. ChocoPy is a programming language designed for teaching an undergraduate course on programming languages and compilers. ChocoPy is a restricted subset of Python 3.6, 
+using static type annotations to enforce compile-time type safety. 
 
 ##Sample Language Used ##
 i used python syantx or calculator program run
