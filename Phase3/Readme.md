@@ -8,7 +8,7 @@ StdID | Name
 
 <!-- Replace name and student ids with acutally group member names and ids-->
 ## Project Description ##
-In this project we learn how to use compiler. We work on choco py language using LEX & YACC. ChocoPy is a programming language designed for teaching an undergraduate course on programming languages and compilers. ChocoPy is a restricted subset of Python 3.6, using static type annotations to enforce compile-time type safety. Lex and yacc are tools used to generate lexical analyzers and parsers. I assume you can program in C and understand data structures
+In this project we learn how to use compiler. We work on choco py language using LEX & YACC. ChocoPy is a programming language designed for teaching an undergraduate course on programming languages and compilers. ChocoPy is a restricted subset of Python 3.6, using static type annotations to enforce compile-time type safety. Lex and yacc are tools used to generate lexical analyzers and parsers. I assume you can program in C and understand data structures such as
 
 ##Sample Language Used ##
 i used python syantx or calculator program run
