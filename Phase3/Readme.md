@@ -8,7 +8,7 @@ StdID | Name
 
 <!-- Replace name and student ids with acutally group member names and ids-->
 ## Project Description ##
-In this project we learn how to use compiler. We work on choco py language using LEX & YACC. ChocoPy is a programming language designed for teaching an undergraduate course on programming languages and compilers. ChocoPy is a restricted subset of Python 3.6, using static type annotations to enforce compile-time type safety. Lex and yacc are tools used to generate lexical analyzers and parsers. I assume you can program in C and understand data structures such as link lists and trees
+Replace this text with the description of your project. Tell what the project was about. What you aimed to deliver in the project.
 
 ##Sample Language Used ##
 i used python syantx or calculator program run
@@ -21,6 +21,44 @@ print ''as'' error
 5
 
 +3-2 error
+
+#### #Include Same Example.h ####
+/* Token type.  */
+#ifndef YYTOKENTYPE
+# define YYTOKENTYPE
+  enum yytokentype
+  {
+    ID = 258,
+    NUMBER = 259,
+    STRING_LIT = 260,
+    STRING_VAR = 261,
+    EQ = 262,
+    PLUS = 263,
+    MINUS = 264,
+    MUL = 265,
+    DIVIDE = 266,
+    LBRACKET = 267,
+    RBRACKET = 268,
+    SEMICOLON = 269,
+    PRINT = 270,
+    KEYWORD = 271
+  };
+#endif
+/* Tokens.  */
+#define ID 258
+#define NUMBER 259
+#define STRING_LIT 260
+#define STRING_VAR 261
+#define EQ 262
+#define PLUS 263
+#define MINUS 264
+#define MUL 265
+#define DIVIDE 266
+#define LBRACKET 267
+#define RBRACKET 268
+#define SEMICOLON 269
+#define PRINT 270
+#define KEYWORD 271
 
 
 
@@ -79,18 +117,18 @@ e.g , ; : .
 ![Untitled](https://user-images.githubusercontent.com/66660943/115433670-3d3d9a80-a221-11eb-95b9-4476dfa18ff7.png)
 ![Untitled2](https://user-images.githubusercontent.com/66660943/115433657-3b73d700-a221-11eb-8555-e1c7630808f5.png)
 
-####Problems Faced####
+#### Problems Faced ####
 
 ####Problem 1: Yacc program ####
 When we merged our lex and yacc file means (1 & .y extension file). We had so many errors in it's compilations like (undefined reference of function in y file, redeifintions, declaration and so on). We had no idea about them because we never worked on such environment. It's our first time when we designed parser so most of the errors were new to us so we researched, took guide from videos and book and then finally after spending several hours on it we resolved them. 
 
-####Problem 2: Install Flex####
+## Problem 2: Install Flex ##
 When we created our lexical analyzer we had many issues in its compilation. Our lex file wasn't created because of installation issues in line, so after trying so many times finally we got succeed.
 ###Problem 2: no background in Python ###
 
 we don't have any good background of python. we generally work on c sharp, javascript usually.
 
-####References####
+## References ##
 * https://chocopy.org/
 * https://www.python.org/dev/peps/pep-0526/
 * https://chocopy.org/chocopy_language_reference.pdf
