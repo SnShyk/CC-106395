@@ -22,7 +22,7 @@ print ''as'' error
 +3-2 error
 
 
-#include <some code examples.h>
+
 * #### Line structure ####
  To accommodate this, ChocoPy defines three lexical
 tokens that are derived from whitespace: NEWLINE, INDENT, and DEDENT. The rules for when such tokens are
