@@ -124,9 +124,9 @@ When we merged our lex and yacc file means (1 & .y extension file). We had so ma
 
 ## Problem 2: Install Flex ##
 When we created our lexical analyzer we had many issues in its compilation. Our lex file wasn't created because of installation issues in line, so after trying so many times finally we got succeed.
-###Problem 2: no background in Python ###
+### Problem 3: language selection problem and why we select this.  ###
 
-we don't have any good background of python. we generally work on c sharp, javascript usually.
+we don't have any good background for pascal or java but python is used in many course like ml,ai nc fyp. ChocoPy programs can be executed directly in a Python (3.6+) interpreter. ChocoPy programs can also be edited using standard Python syntax highlighting. ChocoPy uses Python 3.6 type annotations to enforce static type checking. The type system supports nominal subtyping. The language is fully specified using formal grammar, typing rules, and operational semantics
 
 ## References ##
 * https://chocopy.org/
