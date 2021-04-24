@@ -128,3 +128,10 @@ we don't have any good background for pascal or java but python is used in many 
 * https://chocopy.org/chocopy_language_reference.pdf
 * http://dinosaur.compilertools.net/flex/manpage.html
 * https://chocopy.org/chocopy_implementation_guide.pdf
+
+
+### Demo Video ###
+
+https://user-images.githubusercontent.com/66660943/115952201-15d71e00-a4fe-11eb-9565-ad17e0ab2709.mp4
+
+
