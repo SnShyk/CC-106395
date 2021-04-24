@@ -8,7 +8,7 @@ StdID | Name
 
 <!-- Replace name and student ids with acutally group member names and ids-->
 ## Project Description ##
-Replace this text with the description of your project. Tell what the project was about. What you aimed to deliver in the project.
+This project is all about Chocopy language compiler. In this project we use Chocopy language. ChocoPy is a programming language designed for classroom use in undergraduate compilers courses. ChocoPy is a restricted subset of Python 3, which can easily be compiled to a target such as RISC-V. The language is fully specified using formal grammar, typing rules, and operational semantics. We build this project using LEX and YACC.  Lex and yacc are tools used to generate lexical analyzers and parsers. I assume you can program in C and understand data structures such as linked-lists etc
 
 ## Sample Language Used ##
  ChocoPy is a restricted subset of Python 3, which can easily be compiled to a target.  ChocoPy programs can be executed directly in a Python (3.6+) interpreter. ChocoPy programs can also be edited using standard Python syntax highlighting. ChocoPy uses Python 3.6 type annotations to enforce static type checking. The type system supports nominal subtyping. The language is fully specified using formal grammar, typing rules, and operational semantics
